@@ -1,2 +1,553 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<section id="home" class="parallax section first-section" data-stellar-background-ratio="0.9" style="background-image:url(<%=asset_url('background.jpg')%>);">
+		<div class="index-image-overlay"></div>
+		<div class="customtitle">
+			<%= image_tag "ls_logo.png", class: "img-responsive"%>
+		</div>
+	</section><!-- end section -->	
+
+
+	<section id="media" class="section">
+		<div class="container">
+			<div class="section-title text-center clearfix">
+				<h2>Welcome to the Leaving Spirit Family</h2>
+				<p>We stand for 100% handmade, independent music inspired by blues, rock & country!</p>
+			</div><!-- end title -->
+
+			<div class="row video-wrapper">
+				<div class="col-md-6 m30">
+					<div class="blog-box">
+						<div class="home-video videobox clearfix">
+							<iframe class="videoframe" width="560" height="315" src="https://www.youtube.com/embed/LOETkpsoUOw"></iframe>
+						</div><!-- end media -->
+						<div class="blog-title">
+							<h3><a href="https://www.youtube.com/watch?v=LOETkpsoUOw" title="">Leaving Spirit | Myth of the Delta Blues (Official Video)</a></h3>
+							<p>With "Myth of the Delta Blues" we pay tribute to our influences from the early days of the blues.</p>
+						</div><!-- end blog-title -->
+					</div><!-- end blog-box -->
+				</div><!-- end col -->
+
+				<div class="col-md-6 m30">
+					<div class="blog-box">
+						<div class="home-video videobox clearfix">
+							<iframe class="videoframe" width="560" height="315" src="https://www.youtube.com/embed/w2ofVmkzveo"></iframe>
+						</div><!-- end media -->
+						<div class="blog-title">
+							<h3><a href="https://www.youtube.com/watch?v=w2ofVmkzveo" title="">Leaving Spirit | Mississippi Bridge (Official Video)</a></h3>
+							<p>His way is as lonely as his mind... Follow the unknown rider on his ride through the state of Mississippi!</p>
+						</div><!-- end blog-title -->
+					</div><!-- end blog-box -->
+				</div><!-- end col -->
+
+		
+			</div><!-- end row -->
+		</div><!-- end container -->
+	</section><!-- end section -->
+
+
+	<section id="about" class="section wb">
+		<div class="container">
+			<div class="section-title text-center clearfix">
+				<h2><i>The</i> History</h2>
+				<p>Leaving Spirit stands for 100% handmade, independent music inspired by blues, rock & country!</p>
+			</div><!-- end title -->
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="section-small-title">
+						<h2>About Leaving Spirit</h2>
+					</div><!-- end title -->
+
+					<p> Leaving Spirit was founded in 2016 by Charlotte Bohne, Marea Löser, Leo Kürschner, Laurin Seitz and Florian Eppel. After winning the newcomer contest "Enter the Stage" of a local rock organization in 2017 Anton Bohne joined the band to complete the guitar trio. The band played several club and festival gigs in 2017 and 2018 and also two shows at Würzburgs biggest festival "Umsonst&Draußen". Later on in 2018 the debut album, which was released in 2019 was recorded. Laurin and Charlotte left town to go to university as well as Marea, she went to spread the spirit in Australia. Paula Frecot (vocals), Felix Möser (drums) and Linus Glaesemer (bass) joined the band shortly after to recomplete the lineup.</p>
+
+					<p>The group decided to rerecord the vocals with new vocalist Paula Frecot and released their 13-track debut album "Things Change" on August 2, 2019. They were featured as "act of the month" on Germany's biggest guitar magazine "Gitarre & Bass" (vol. 09/2019). The band took a hiatus from touring until mid 2020. During that time they released a nine episode video series called the "Acoustic Garden Sessions".</p>
+
+					<p>Despite the corona virus pandemic Leaving Spirit played their first tour across Germany in Fall 2020 with stops in Berlin, Hamburg, Leipzig, Hannover and Würzburg. The band released several new songs in a live session format in 2021 on Spotify and YouTube. After a reformation in 2021 with new members Maik Wiezorrek on keys, Eric Loeffler on guitars and Amelie Platzoeder on bass, the band is currently planning the release of their new record and a tour for Fall 2022.</p>
+
+				</div><!-- end col -->
+
+				<div class="col-md-6">
+					<div class="home-video">
+						<iframe class="videoframe" width="560" height="315" src="https://www.youtube.com/embed/LOETkpsoUOw"></iframe>
+					</div><!-- end video -->
+				</div><!-- end col -->
+			</div><!-- end row -->
+
+			<hr class="invis">
+
+			<div class="row">
+				<div class="col-md-2">
+					<div class="teambox clearfix">
+						<div class="member">
+							<img src=<%=asset_url('upload/member_01.jpg')%> alt="" class="alignleft">
+							<i class="flaticon-karaoke"></i>
+						</div>
+						<h4>Vocals</h4>
+						<small>Paula Frecot</small>
+					</div><!-- end teambox -->
+				</div><!-- end col -->
+
+				<div class="col-md-2">
+					<div class="teambox clearfix">
+						<div class="member">
+							<img src=<%=asset_url('upload/member_03.jpg')%> alt="" class="alignleft">
+							<i class="flaticon-electric-guitar"></i>
+						</div>
+						<h4>Guitars</h4>
+						<small>Florian Eppel</small>
+					</div><!-- end teambox -->
+				</div><!-- end col -->
+
+				<div class="col-md-2">
+					<div class="teambox clearfix">
+						<div class="member">
+							<img src=<%=asset_url('upload/member_02.jpg')%> alt="" class="alignleft">
+							<i class="flaticon-saxophone"></i>
+						</div>
+						<h4>Hammond/Piano</h4>
+						<small>Maik Wiezorrek</small>
+					</div><!-- end teambox -->
+				</div><!-- end col -->
+
+				<div class="col-md-2">
+					<div class="teambox clearfix">
+						<div class="member">
+							<img src=<%=asset_url('upload/member_03.jpg')%> alt="" class="alignleft">
+							<i class="flaticon-electric-guitar"></i>
+						</div>
+						<h4>Guitars</h4>
+						<small>Eric Löffler</small>
+					</div><!-- end teambox -->
+				</div><!-- end col -->
+
+				<div class="col-md-2">
+					<div class="teambox clearfix">
+						<div class="member">
+							<img src=<%=asset_url('upload/member_03.jpg')%> alt="" class="alignleft">
+							<i class="flaticon-electric-guitar"></i>
+						</div>
+						<h4>Bass</h4>
+						<small>Amelie Platzöder</small>
+					</div><!-- end teambox -->
+				</div><!-- end col -->
+
+				<div class="col-md-2">
+					<div class="teambox clearfix">
+						<div class="member">
+							<img src=<%=asset_url('upload/member_04.jpg')%> alt="" class="alignleft">
+							<i class="flaticon-drum-set"></i>
+						</div>
+						<h4>Drums</h4>
+						<small>Felix Möser</small>
+					</div><!-- end teambox -->
+				</div><!-- end col -->
+			</div><!-- end row -->
+		</div><!-- end container -->
+	</section><!-- end section -->
+
+	<section id="tour" class="section">
+		<div class="container">
+			<div class="section-title text-center clearfix">
+				<h2>Tour Dates</h2>
+				<p>A complete list of festivals and concerts to be held soon! You can buy the latest concert tickets here!</p>
+			</div><!-- end title -->
+
+			<div class="tour-table table-responsive">
+			  <table class="table row">
+			    <thead>
+			      <tr>
+			        <th class="col-md-3">Date</th>
+			        <th class="col-md-4">Venue</th>
+			        <th class="col-md-3">Location</th>
+			        <th class="col-md-2 text-center">Ticket</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			        <td class="col-md-3 tour-date">March 26, 2022</td>
+			        <td class="col-md-4"><a href="#">Live-Club</a></td>
+			        <td class="col-md-3">Bamberg, Germany</td>
+			        <td class="col-md-2 ticket-button text-center"><a href="#" class="btn btn-primary">Tickets</a></td>
+			      </tr>
+			      <tr>
+			        <td class="col-md-3 tour-date">April 8, 2022</td>
+			        <td class="col-md-4"><a href="#">b-hof</a></td>
+			        <td class="col-md-3">Würzburg, Germany</td>
+			        <td class="col-md-2 ticket-button text-center"><a href="#" class="btn btn-primary">Tickets</a></td>
+			      </tr>
+			      <tr>
+			        <td class="col-md-3 tour-date">June 19, 2022</td>
+			        <td class="col-md-4"><a href="#">Umsonst & Draußen Festival</a></td>
+			        <td class="col-md-3">Würzburg, Germany</td>
+			        <td class="col-md-2 ticket-button text-center"><a href="#" class="btn btn-primary">Tickets</a></td>
+			      </tr>
+			      <tr>
+			        <td class="col-md-3 tour-date">September 24, 2022</td>
+			        <td class="col-md-4"><a href="#">Pusta-Stube</a></td>
+			        <td class="col-md-3">Bremen, Germany</td>
+			        <td class="col-md-2 ticket-button text-center"><a href="#" class="btn btn-primary">Tickets</a></td>
+			      </tr>
+			      <tr>
+			        <td class="col-md-3 tour-date">September 26, 2022</td>
+			        <td class="col-md-4"><a href="#">Tonfink</a></td>
+			        <td class="col-md-3">Lübeck, Germany</td>
+			        <td class="col-md-2 ticket-button text-center"><a href="#" class="btn btn-primary">Tickets</a></td>
+			      </tr>
+			      <tr>
+			        <td class="col-md-3 tour-date">September 30, 2022</td>
+			        <td class="col-md-4"><a href="#">Extra-Blues Bar</a></td>
+			        <td class="col-md-3">Bielefeld, Germany</td>
+			        <td class="col-md-2 ticket-button text-center"><a href="#" class="btn btn-primary">Tickets</a></td>
+			      </tr>
+			      <tr>
+			        <td class="col-md-3 tour-date">October 1, 2022</td>
+			        <td class="col-md-4"><a href="#">Stellwerk 3</a></td>
+			        <td class="col-md-3">Schellklingen, Germany</td>
+			        <td class="col-md-2 ticket-button text-center"><a href="#" class="btn btn-primary">Tickets</a></td>
+			      </tr>		
+			      <tr>
+			        <td class="col-md-3 tour-date">October 2, 2022</td>
+			        <td class="col-md-4"><a href="#">Eddi's Biker Residenz</a></td>
+			        <td class="col-md-3">Althütte, Germany</td>
+			        <td class="col-md-2 ticket-button text-center"><a href="#" class="btn btn-primary">Tickets</a></td>
+			      </tr>			      	      
+			      <tr>
+			        <td class="col-md-3 tour-date">October 27, 2022</td>
+			        <td class="col-md-4"><a href="#">Stagehouse Stream</a></td>
+			        <td class="col-md-3">Lohr, Germany</td>
+			        <td class="col-md-2 ticket-button text-center"><a href="#" class="btn btn-primary">Tickets</a></td>
+			      </tr>
+			    </tbody>
+			  </table>
+			</div><!-- end tour-table -->
+
+			<div class="section-button text-center">
+				<a href="concerts.html" class="btn btn-primary btn-lg">LIST OF ALL CONCERTS</a>
+			</div>
+		</div><!-- end container -->
+	</section><!-- end section -->
+
+	<section id="albums" class="section wb">
+		<div class="container">
+			<div class="section-title text-center clearfix">
+				<h2>Records</h2>
+				<p>Singles and all albums we have released since 2019.</p>
+			</div><!-- end title -->
+
+			<div class="row albume-wrapper">
+				<div class="col-md-4 col-sm-6 m30">
+					<div class="grid__item">
+						<a class="grid__link" href="#album-1">
+							<div class="img-wrap img-wrap--grid">
+								<svg class="lp lp--grid"></svg>
+								<img class="img img--grid" src=<%=asset_url('refrigeratorblues.jpg')%> alt="refrigeratorblues" />
+							</div>
+							<span class="year">2021</span>
+							<h2 class="artist">Leaving Spirit</h2>
+							<h3 class="title">Refrigerator Blues</h3>
+						</a>
+					</div>
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-6 m30">
+					<div class="grid__item">
+						<a class="grid__link" href="#album-1">
+							<div class="img-wrap img-wrap--grid">
+								<svg class="lp lp--grid"></svg>
+								<img class="img img--grid" src=<%=asset_url('mythofthedeltablues.jpg')%> alt="mythofthedeltablues" />
+							</div>
+							<span class="year">2021</span>
+							<h2 class="artist">Leaving Spirit</h2>
+							<h3 class="title">Myth of the Delta Blues</h3>
+						</a>
+					</div>
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-6 m30">
+					<div class="grid__item">
+						<a class="grid__link" href="#album-1">
+							<div class="img-wrap img-wrap--grid">
+								<svg class="lp lp--grid"></svg>
+								<img class="img img--grid" src=<%=asset_url('cometogether.jpg')%> alt="thingschange" />
+							</div>
+							<span class="year">2021</span>
+							<h2 class="artist">Leaving Spirit</h2>
+							<h3 class="title">Come Together</h3>
+						</a>
+					</div>
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-6 m30">
+					<div class="grid__item">
+						<a class="grid__link" href="#album-1">
+							<div class="img-wrap img-wrap--grid">
+								<svg class="lp lp--grid"></svg>
+								<img class="img img--grid" src=<%=asset_url('dustywindow.jpg')%> alt="album1" />
+							</div>
+							<span class="year">2021</span>
+							<h2 class="artist">Leaving Spirit</h2>
+							<h3 class="title">Dusty Window</h3>
+						</a>
+					</div>
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-6 m30">
+					<div class="grid__item">
+						<a class="grid__link" href="#album-1">
+							<div class="img-wrap img-wrap--grid">
+								<svg class="lp lp--grid"></svg>
+								<img class="img img--grid" src=<%=asset_url('acousticgardensessions.jpg')%> alt="album1" />
+							</div>
+							<span class="year">2020</span>
+							<h2 class="artist">Leaving Spirit</h2>
+							<h3 class="title">Acoustic Garden Sessions</h3>
+						</a>
+					</div>
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-6 m30">
+					<div class="grid__item">
+						<a class="grid__link" href="#album-1">
+							<div class="img-wrap img-wrap--grid">
+								<svg class="lp lp--grid"></svg>
+								<img class="img img--grid" src=<%=asset_url('thingschange.jpg')%> alt="thingschange" />
+							</div>
+							<span class="year">2019</span>
+							<h2 class="artist">Leaving Spirit</h2>
+							<h3 class="title">Things Change</h3>
+						</a>
+					</div>
+				</div><!-- end col -->
+			</div><!-- end row -->
+
+			<div class="section-button text-center">
+				<a href="https://open.spotify.com/artist/1rxtBMjRYbUsgjLFnhjmp0" class="btn btn-primary btn-lg">VIEW ON SPOTIFY</a>
+			</div>
+		</div><!-- end container -->
+	</section><!-- end section -->
+
+	<section id="follow" class="section">
+		<div class="container">
+			<div class="section-title text-center clearfix">
+				<h2>Follow <i>BTR</i></h2>
+				<p>Follow Back to Rock on your social media profiles and get updates / tickets for free!</p>
+			</div><!-- end title -->
+
+			<div class="row">
+				
+			</div><!-- end row -->
+		</div><!-- end container -->
+	</section><!-- end section -->
+
+
+	<section id="store" class="section wb">
+		<div class="container">
+			<div class="section-title text-center clearfix">
+				<h2><i>Our</i> STORE</h2>
+				<p>Listed below our awesome store items! We design custom t-shirt's for our awesome fans!</p>
+			</div><!-- end title -->
+
+			<div class="row text-center">
+				<div class="col-md-3">
+					<div class="shop-box">
+						<div class="media-element">
+							<img src=<%=asset_url('upload/shop_01.png')%> alt="" class="img-responsive">
+						</div><!-- end media -->
+
+						<hr>
+
+						<div class="shop-meta">
+							<h3><a href="#">T-Shirt Offical Logo</a></h3>
+							<div class="clearfix">
+								<small class="pull-left">$21.00</small>
+								<small class="pull-right"><a href="#" class="btn btn-primary btn-sm">Add to Cart</a></small>
+							</div>
+						</div><!-- end shop-meta -->
+					</div><!-- end shop-box -->
+				</div><!-- end col -->
+
+				<div class="col-md-3">
+					<div class="shop-box">
+						<div class="media-element">
+							<img src=<%=asset_url('upload/shop_01.png')%> alt="" class="img-responsive">
+						</div><!-- end media -->
+
+						<hr>
+
+						<div class="shop-meta">
+							<h3><a href="#">T-Shirt Guitar</a></h3>
+							<div class="clearfix">
+								<small class="pull-left">$21.00</small>
+								<small class="pull-right"><a href="#" class="btn btn-primary btn-sm">Add to Cart</a></small>
+							</div>
+						</div><!-- end shop-meta -->
+					</div><!-- end shop-box -->
+				</div><!-- end col -->
+
+				<div class="col-md-3">
+					<div class="shop-box">
+						<div class="media-element">
+							<img src=<%=asset_url('upload/shop_01.png')%> alt="" class="img-responsive">
+						</div><!-- end media -->
+
+						<hr>
+
+						<div class="shop-meta">
+							<h3><a href="#">T-Shirt Skull</a></h3>
+							<div class="clearfix">
+								<small class="pull-left">$21.00</small>
+								<small class="pull-right"><a href="#" class="btn btn-primary btn-sm">Add to Cart</a></small>
+							</div>
+						</div><!-- end shop-meta -->
+					</div><!-- end shop-box -->
+				</div><!-- end col -->
+
+				<div class="col-md-3">
+					<div class="shop-box">
+						<div class="media-element">
+							<img src=<%=asset_url('upload/shop_01.png')%> alt="" class="img-responsive">
+						</div><!-- end media -->
+
+						<hr>
+
+						<div class="shop-meta">
+							<h3><a href="#">T-Shirt Rip Logo</a></h3>
+							<div class="clearfix">
+								<small class="pull-left">$21.00</small>
+								<small class="pull-right"><a href="#" class="btn btn-primary btn-sm">Add to Cart</a></small>
+							</div>
+						</div><!-- end shop-meta -->
+					</div><!-- end shop-box -->
+				</div><!-- end col -->
+			</div><!-- end row -->
+
+			<div class="section-button text-center">
+				<a href="#" class="btn btn-primary btn-lg">VIEW ON AMAZON STORE</a>
+			</div>
+		</div><!-- end container -->
+	</section><!-- end section -->
+
+	
+
+	<!-- fixed, bottom-aligned, full-width player -->
+	<div class="sm2-bar-ui full-width fixed audioplayer">
+	    <div class="bd sm2-main-controls">
+	        <div class="sm2-inline-texture"></div>
+	        <div class="sm2-inline-gradient"></div>
+	        <div class="sm2-inline-element sm2-button-element">
+	            <div class="sm2-button-bd">
+	                <a href="#play" class="sm2-inline-button play-pause">Play / pause</a>
+	            </div>
+	        </div>
+
+	        <div class="sm2-inline-element sm2-inline-status">
+	            <div class="sm2-playlist">
+	                <div class="sm2-playlist-target">
+	                    <!-- playlist <ul> + <li> markup will be injected here -->
+	                    <!-- if you want default / non-JS content, you can put that here. -->
+	                    <noscript>
+	                        <p>JavaScript is required.</p>
+	                    </noscript>
+	                </div>
+	            </div>
+
+	            <div class="sm2-progress">
+	                <div class="sm2-row">
+	                    <div class="sm2-inline-time">0:00</div>
+	                    <div class="sm2-progress-bd">
+	                        <div class="sm2-progress-track">
+	                            <div class="sm2-progress-bar"></div>
+	                            <div class="sm2-progress-ball">
+	                                <div class="icon-overlay"></div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="sm2-inline-duration">0:00</div>
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="sm2-inline-element sm2-button-element sm2-volume">
+	            <div class="sm2-button-bd">
+	                <span class="sm2-inline-button sm2-volume-control volume-shade"></span>
+	                <a href="#volume" class="sm2-inline-button sm2-volume-control">volume</a>
+	            </div>
+	        </div>
+
+	        <div class="sm2-inline-element sm2-button-element">
+	            <div class="sm2-button-bd">
+	                <a href="#prev" title="Previous" class="sm2-inline-button previous">&lt; previous</a>
+	            </div>
+	        </div>
+
+	        <div class="sm2-inline-element sm2-button-element">
+	            <div class="sm2-button-bd">
+	                <a href="#next" title="Next" class="sm2-inline-button next">&gt; next</a>
+	            </div>
+	        </div>
+
+	        <div class="sm2-inline-element sm2-button-element">
+	            <div class="sm2-button-bd">
+	                <a href="#repeat" title="Repeat playlist" class="sm2-inline-button repeat">&infin; repeat</a>
+	            </div>
+	        </div>
+
+	        <div class="sm2-inline-element sm2-button-element sm2-menu">
+	            <div class="sm2-button-bd">
+	                <a href="#menu" class="sm2-inline-button menu">menu</a>
+	            </div>
+	        </div>
+	    </div>
+
+	    <div class="bd sm2-playlist-drawer sm2-element">
+	        <div class="sm2-inline-texture">
+	            <div class="sm2-box-shadow"></div>
+	        </div>
+	        <!-- playlist content is mirrored here -->
+	        <div class="sm2-playlist-wrapper">
+	            <ul class="sm2-playlist-bd">
+					<!-- item with "download" link -->
+					<li>
+					    <div class="sm2-row">
+					        <div class="sm2-col sm2-wide">
+					            <a href="http://freshly-ground.com/data/audio/sm2/SonReal%20-%20LA%20%28Prod%20Chin%20Injetti%29.mp3"><b>SonReal</b> - LA<span class="label">Explicit</span></a>
+					        </div>
+					        <div class="sm2-col">
+					            <a href="http://freshly-ground.com/data/audio/sm2/SonReal%20-%20LA%20%28Prod%20Chin%20Injetti%29.mp3" target="_blank" title="Download &quot;LA&quot;" class="sm2-icon sm2-music sm2-exclude">Download this track</a>
+					        </div>
+					    </div>
+					</li>
+
+					<!-- standard one-line items -->
+					<li><a href="http://freshly-ground.com/data/audio/sm2/SonReal%20-%20People%20Asking.mp3"><b>SonReal</b> - People Asking <span class="label">Explicit</span></a></li>
+					<li><a href="http://freshly-ground.com/data/audio/sm2/SonReal%20-%20Already%20There%20Remix%20ft.%20Rich%20Kidd%2C%20Saukrates.mp3"><b>SonReal</b> - Already There Remix ft. Rich Kidd, Saukrates <span class="label">Explicit</span></a></li>
+					<li><a href="http://freshly-ground.com/data/audio/sm2/The%20Fugitives%20-%20Graffiti%20Sex.mp3"><b>The Fugitives</b> - Graffiti Sex</a></li>
+					<li><a href="http://freshly-ground.com/data/audio/sm2/Adrian%20Glynn%20-%20Seven%20Or%20Eight%20Days.mp3"><b>Adrian Glynn</b> - Seven Or Eight Days</a></li>
+					<li><a href="http://freshly-ground.com/data/audio/sm2/SonReal%20-%20I%20Tried.mp3"><b>SonReal</b> - I Tried</a></li>
+					<li><a href="http://freshly-ground.com/data/audio/sm2/gong-192kbps.mp3">32" Gong Sounds (rubber + standard mallets)</a></li>
+					<li><a href="http://freshly-ground.com/data/audio/mpc/20060826%20-%20Armstrong.mp3">Armstrong Beat</a></li>
+					<li><a href="http://freshly-ground.com/data/audio/mpc/20090119%20-%20Untitled%20Groove.mp3">Untitled Groove</a></li>
+					<li><a href="http://freshly-ground.com/data/audio/sm2/birds-in-kauai-128kbps-aac-lc.mp4">Birds In Kaua'i (AAC)</a></li>
+					<li><a href="http://freshly-ground.com/data/audio/sm2/20130320%20-%20Po%27ipu%20Beach%20Waves.ogg">Po'ipu Beach Waves (OGG)</a></li>
+					<li><a href="http://freshly-ground.com/data/audio/sm2/bottle-pop.wav">A corked beer bottle (WAV)</a></li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
+
+	<section class="footer section lb nobpad">
+        <div class="copyrights">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <p>2016 - 2023 &copy;Leaving Spirit. All rights reserved.</p>
+                        <ul class="list-inline">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Google+</a></li>
+                        </ul>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end copyrights -->
+	</section><!-- end section -->
+

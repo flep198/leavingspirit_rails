@@ -1,7 +1,22 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Leavingspirit</title>
+<!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Site Meta -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+
+    <title>Leaving Spirit</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,9 +27,75 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%#= javascript_pack_tag "application" %>
-  </head>
 
-  <body>
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href=<%=asset_url('favicon.ico')%> type="image/x-icon" />
+    <link rel="apple-touch-icon" href=<%=asset_url('apple-touch-icon.png')%>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet"> 
+
+  <!-- Audio Player -->
+  <%= stylesheet_link_tag 'bar-ui' %>
+  <!--<link rel="stylesheet" href="css/bar-ui.css" />-->
+
+  <!-- Custom & Default Styles -->
+  <%= stylesheet_link_tag 'font-awesome_min' %>
+  <%= stylesheet_link_tag 'bootstrap_min' %>
+  <%= stylesheet_link_tag 'carousel' %>
+  <%= stylesheet_link_tag 'style' %>
+
+</head>
+<body>
+
+  <header class="header first-header">
+    <div class="container">
+      <nav class="navbar navbar-default">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+
+          </div>
+          <a class="navbar-brand" href="index.html"><img src=<%=asset_url('ls_logo.png')%> alt=""></a>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-left">
+                  <li><a data-scroll href="#home">Home</a></li>
+                  <li><a data-scroll href="#news">News</a></li>
+                  <li><a data-scroll href="#about">About</a></li>
+                  <li><a data-scroll href="#tour">Tour</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a data-scroll href="#albums">Records</a></li>
+                  <li><a data-scroll href="#media">Media</a></li>
+                  <li><a data-scroll href="#store">Store</a></li>
+                  <li><a data-scroll href="#follow">Follow</a></li>
+              </ul>
+          </div><!-- /.navbar-collapse -->
+      </nav>
+    </div><!-- ebd container -->
+  </header><!-- end header -->
     <%= yield %>
+
+
+  <!-- jQuery Files -->
+  <%= javascript_include_tag 'jquery_min' %>
+  <%= javascript_include_tag 'bootstrap_min' %>
+  <%= javascript_include_tag 'parallax' %>
+  <%= javascript_include_tag 'owl_carousel' %>
+  <%= javascript_include_tag 'jquery_fitvids' %>
+  <%= javascript_include_tag 'scroll' %>
+  <%= javascript_include_tag 'custom' %>
+  
+
+  <!-- Audio Player -->
+  <%= javascript_include_tag 'soundmanager2' %>
+  <%= javascript_include_tag 'bar-ui' %>
+
   </body>
 </html>
