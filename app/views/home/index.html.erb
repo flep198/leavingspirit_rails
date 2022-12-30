@@ -162,60 +162,14 @@
 			      </tr>
 			    </thead>
 			    <tbody>
+			    <% @concerts.each do |concert| %>
 			      <tr>
-			        <td class="col-md-3 tour-date">March 26, 2022</td>
-			        <td class="col-md-4"><a href="#">Live-Club</a></td>
-			        <td class="col-md-3">Bamberg, Germany</td>
-			        <td class="col-md-2 ticket-button text-center"><a href="#" class="btn btn-primary">Tickets</a></td>
+			        <td class="col-md-3 tour-date"><%=concert.date%></td>
+			        <td class="col-md-4"><a href="#"><%=concert.title%></a></td>
+			        <td class="col-md-3"><%=concert.location_name%></td>
+			        <td class="col-md-2 ticket-button text-center"><a href='<%=concert.ticket_link%>' class="btn btn-primary">Tickets</a></td>
 			      </tr>
-			      <tr>
-			        <td class="col-md-3 tour-date">April 8, 2022</td>
-			        <td class="col-md-4"><a href="#">b-hof</a></td>
-			        <td class="col-md-3">Würzburg, Germany</td>
-			        <td class="col-md-2 ticket-button text-center"><a href="#" class="btn btn-primary">Tickets</a></td>
-			      </tr>
-			      <tr>
-			        <td class="col-md-3 tour-date">June 19, 2022</td>
-			        <td class="col-md-4"><a href="#">Umsonst & Draußen Festival</a></td>
-			        <td class="col-md-3">Würzburg, Germany</td>
-			        <td class="col-md-2 ticket-button text-center"><a href="#" class="btn btn-primary">Tickets</a></td>
-			      </tr>
-			      <tr>
-			        <td class="col-md-3 tour-date">September 24, 2022</td>
-			        <td class="col-md-4"><a href="#">Pusta-Stube</a></td>
-			        <td class="col-md-3">Bremen, Germany</td>
-			        <td class="col-md-2 ticket-button text-center"><a href="#" class="btn btn-primary">Tickets</a></td>
-			      </tr>
-			      <tr>
-			        <td class="col-md-3 tour-date">September 26, 2022</td>
-			        <td class="col-md-4"><a href="#">Tonfink</a></td>
-			        <td class="col-md-3">Lübeck, Germany</td>
-			        <td class="col-md-2 ticket-button text-center"><a href="#" class="btn btn-primary">Tickets</a></td>
-			      </tr>
-			      <tr>
-			        <td class="col-md-3 tour-date">September 30, 2022</td>
-			        <td class="col-md-4"><a href="#">Extra-Blues Bar</a></td>
-			        <td class="col-md-3">Bielefeld, Germany</td>
-			        <td class="col-md-2 ticket-button text-center"><a href="#" class="btn btn-primary">Tickets</a></td>
-			      </tr>
-			      <tr>
-			        <td class="col-md-3 tour-date">October 1, 2022</td>
-			        <td class="col-md-4"><a href="#">Stellwerk 3</a></td>
-			        <td class="col-md-3">Schellklingen, Germany</td>
-			        <td class="col-md-2 ticket-button text-center"><a href="#" class="btn btn-primary">Tickets</a></td>
-			      </tr>		
-			      <tr>
-			        <td class="col-md-3 tour-date">October 2, 2022</td>
-			        <td class="col-md-4"><a href="#">Eddi's Biker Residenz</a></td>
-			        <td class="col-md-3">Althütte, Germany</td>
-			        <td class="col-md-2 ticket-button text-center"><a href="#" class="btn btn-primary">Tickets</a></td>
-			      </tr>			      	      
-			      <tr>
-			        <td class="col-md-3 tour-date">October 27, 2022</td>
-			        <td class="col-md-4"><a href="#">Stagehouse Stream</a></td>
-			        <td class="col-md-3">Lohr, Germany</td>
-			        <td class="col-md-2 ticket-button text-center"><a href="#" class="btn btn-primary">Tickets</a></td>
-			      </tr>
+			    <% end %>
 			    </tbody>
 			  </table>
 			</div><!-- end tour-table -->

@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2022-12-30
+  time: 2022-12-30 15:39:56
+  fb_link: MyString
+  coordinates: MyString
+  location_name: MyString
+  ticket_link: MyString
+  location_link: MyString
+
+two:
+  date: 2022-12-30
+  time: 2022-12-30 15:39:56
+  fb_link: MyString
+  coordinates: MyString
+  location_name: MyString
+  ticket_link: MyString
+  location_link: MyString
