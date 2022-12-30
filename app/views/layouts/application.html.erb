@@ -24,8 +24,7 @@
     <%#= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    
     <%#= javascript_pack_tag "application" %>
 
     <!-- Site Icons -->
@@ -78,8 +77,22 @@
               </ul>
           </div><!-- /.navbar-collapse -->
       </nav>
+
+
     </div><!-- ebd container -->
   </header><!-- end header -->
+
+<% if alert %>
+<div class="alert alert-secondary" role="alert">
+  <%= alert %>
+</div>
+<% end %>
+<% if notice %>
+<div class="alert alert-secondary" role="alert">
+  <%= notice %>
+</div>
+<% end %>
+
     <%= yield %>
 
 
