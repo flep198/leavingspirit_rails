@@ -361,7 +361,7 @@
 								<div class="clearfix">
 									<small class="pull-left"><%=product.price%> €</small>
 									<small class="pull-right"><a href="#" class="btn btn-primary btn-sm"><%if signed_in?%>
-  <%=link_to "", class: "button", data: {target: product.cart_action(current_user.id), addUrl: add_to_cart_path(product.id), removeUrl: remove_from_cart_path(product.id)} do%>
+  <%=link_to "", class: "button", data: {target: product.cart_action(current_user.id), addUrl: add_to_cart_path(product), removeUrl: remove_from_cart_path(product)} do%>
     <%=product.cart_action(current_user.id)%> Cart
   <%end%>
 <%end%></a></small>
@@ -400,3 +400,5 @@
   src="https://cdn2.woxo.tech/a.js#63af0676ff5457580d21a50b" 
   async data-usrc>
 </script> 
+
+

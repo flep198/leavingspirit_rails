@@ -1,6 +1,7 @@
 class CartsController < ApplicationController
   before_action :authenticate_user!
-
+  skip_before_action :verify_authenticity_token
+  
   def show
     cart_ids = $redis.smembers current_user_cart
     @cart_products = Product.find(cart_ids)
