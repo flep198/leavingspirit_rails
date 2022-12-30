@@ -21,6 +21,9 @@ gem 'plotly-js', '~> 1.20', '>= 1.20.5.4'
 gem 'linefit', '~> 0.3.2'
 gem "font-awesome-rails"
 gem 'activeadmin'
+gem 'hiredis', '~> 0.6.0'
+gem 'redis', '~> 3.1.0'
+
 
 
 # Use Active Storage variant

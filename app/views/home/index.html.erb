@@ -337,81 +337,40 @@
 			<div class="section-title text-center clearfix">
 				<h2><i>Our</i> STORE</h2>
 				<p>Listed below our awesome store items! We design custom t-shirt's for our awesome fans!</p>
+				<% if user_signed_in? %>
+				<%= link_to cart_path do%>
+			    My Cart
+			    (<span class="cart-count"><%=current_user.cart_count%></span>)
+			  <%end%>
+			  <%end%>
 			</div><!-- end title -->
 
 			<div class="row text-center">
-				<div class="col-md-3">
-					<div class="shop-box">
-						<div class="media-element">
-							<img src=<%=asset_url('upload/shop_01.png')%> alt="" class="img-responsive">
-						</div><!-- end media -->
 
-						<hr>
+				<% @products.each do |product| %>
+					<div class="col-md-3">
+						<div class="shop-box">
+							<div class="media-element">
+								<img src=<%=asset_url('upload/shop_01.png')%> alt="" class="img-responsive">
+							</div><!-- end media -->
 
-						<div class="shop-meta">
-							<h3><a href="#">T-Shirt Offical Logo</a></h3>
-							<div class="clearfix">
-								<small class="pull-left">$21.00</small>
-								<small class="pull-right"><a href="#" class="btn btn-primary btn-sm">Add to Cart</a></small>
-							</div>
-						</div><!-- end shop-meta -->
-					</div><!-- end shop-box -->
-				</div><!-- end col -->
+							<hr>
 
-				<div class="col-md-3">
-					<div class="shop-box">
-						<div class="media-element">
-							<img src=<%=asset_url('upload/shop_01.png')%> alt="" class="img-responsive">
-						</div><!-- end media -->
+							<div class="shop-meta">
+								<h3><a href="#"><%=product.name%></a></h3>
+								<div class="clearfix">
+									<small class="pull-left"><%=product.price%> €</small>
+									<small class="pull-right"><a href="#" class="btn btn-primary btn-sm"><%if signed_in?%>
+  <%=link_to "", class: "button", data: {target: product.cart_action(current_user.id), addUrl: add_to_cart_path(product.id), removeUrl: remove_from_cart_path(product.id)} do%>
+    <%=product.cart_action(current_user.id)%> Cart
+  <%end%>
+<%end%></a></small>
+								</div>
+							</div><!-- end shop-meta -->
+						</div><!-- end shop-box -->
+					</div><!-- end col -->
+				<%end%>
 
-						<hr>
-
-						<div class="shop-meta">
-							<h3><a href="#">T-Shirt Guitar</a></h3>
-							<div class="clearfix">
-								<small class="pull-left">$21.00</small>
-								<small class="pull-right"><a href="#" class="btn btn-primary btn-sm">Add to Cart</a></small>
-							</div>
-						</div><!-- end shop-meta -->
-					</div><!-- end shop-box -->
-				</div><!-- end col -->
-
-				<div class="col-md-3">
-					<div class="shop-box">
-						<div class="media-element">
-							<img src=<%=asset_url('upload/shop_01.png')%> alt="" class="img-responsive">
-						</div><!-- end media -->
-
-						<hr>
-
-						<div class="shop-meta">
-							<h3><a href="#">T-Shirt Skull</a></h3>
-							<div class="clearfix">
-								<small class="pull-left">$21.00</small>
-								<small class="pull-right"><a href="#" class="btn btn-primary btn-sm">Add to Cart</a></small>
-							</div>
-						</div><!-- end shop-meta -->
-					</div><!-- end shop-box -->
-				</div><!-- end col -->
-
-				<div class="col-md-3">
-					<div class="shop-box">
-						<div class="media-element">
-							<img src=<%=asset_url('upload/shop_01.png')%> alt="" class="img-responsive">
-						</div><!-- end media -->
-
-						<hr>
-
-						<div class="shop-meta">
-							<h3><a href="#">T-Shirt Rip Logo</a></h3>
-							<div class="clearfix">
-								<small class="pull-left">$21.00</small>
-								<small class="pull-right"><a href="#" class="btn btn-primary btn-sm">Add to Cart</a></small>
-							</div>
-						</div><!-- end shop-meta -->
-					</div><!-- end shop-box -->
-				</div><!-- end col -->
-			</div><!-- end row -->
 
 			<div class="section-button text-center">
 				<a href="#" class="btn btn-primary btn-lg">VIEW ON AMAZON STORE</a>
