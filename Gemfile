@@ -23,7 +23,9 @@ gem "font-awesome-rails"
 gem 'activeadmin'
 gem 'hiredis', '~> 0.6.0'
 gem 'redis', '~> 3.1.0'
-
+gem 'braintree'
+gem 'figaro'
+gem 'gon'
 
 
 # Use Active Storage variant
