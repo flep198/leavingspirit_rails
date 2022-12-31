@@ -359,10 +359,10 @@
 							<div class="shop-meta">
 								<h3><a href="#"><%=product.name%></a></h3>
 								<div class="clearfix">
-									<small class="pull-left"><%=product.price%> €</small>
+									<small class="pull-left"><%=sprintf('%.2f',product.price.round(2)) %> €</small>
 									<small class="pull-right"><a href="#" class="btn btn-primary btn-sm"><%if signed_in?%>
-  <%=link_to "", class: "button", data: {target: product.cart_action(current_user.id), addUrl: add_to_cart_path(product), removeUrl: remove_from_cart_path(product)} do%>
-    <%=product.cart_action(current_user.id)%> Cart
+  <%=link_to "", class: "button", data: {target: "Add to", addUrl: add_to_cart_path(product), removeUrl: remove_from_cart_path(product)} do%>
+    Add To Cart
   <%end%>
 <%end%></a></small>
 								</div>

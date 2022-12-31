@@ -8,6 +8,7 @@
   </div>
 
   <% @cart_products.each do |product|%>
+  <% @n_prod=current_user.get_number_of_product_in_cart(product)%>
   <div data-equalizer class="cart-product large-12 column mb1">
     <div class="column large-2 text-center p0" data-equalizer-watch>
       <%=link_to product do%>
@@ -15,18 +16,21 @@
       <%end%>
     </div>
     <div class="column large-7 glassy-bg text-center" data-equalizer-watch>
-        <p class="scale ptm"> <%= product.name %> </p>
+        <p class="scale ptm"> <%= product.name %> (<%=@n_prod%> x)</p>
     </div>
     <div class="column large-3 primary-bg text-center radius-r1" data-equalizer-watch>
       <%=link_to "" , data: {targetUrl: remove_from_cart_path(product)} do%>
         <i class="fi-x right">Remove</i>
       <%end%>
-      <h4 class="scale">$ <%= product.price %></h4>
+      <h4 class="scale"><span class="product-price"><%=sprintf('%.2f',(product.price*@n_prod).round(2))%> € (<%= @n_prod %> x <%= sprintf('%.2f',product.price.round(2)) %> €)</span></h4>
     </div>
   </div>
   <%end%>
+</br>
+  <div class="text-center">
+  <%=link_to "Checkout", new_transaction_path, class: "button" unless current_user.get_cart_products.blank?%> (Total: <%=current_user.cart_total_price%> €)
+  </div>
 </div>
-<%=link_to "Checkout", new_transaction_path, class: "button" unless current_user.get_cart_products.blank?%>
 </div>
 </section>
 
