@@ -143,7 +143,7 @@
 							<i class="flaticon-drum-set"></i>
 						</div>
 						<h4>Drums</h4>
-						<small>Felix Möser</small>
+						<small>Fabian Schäfauer</small>
 					</div><!-- end teambox -->
 				</div><!-- end col -->
 			</div><!-- end row -->
@@ -337,11 +337,9 @@
 			<div class="section-title text-center clearfix">
 				<h2><i>Our</i> STORE</h2>
 				<p>Listed below our awesome store items! We design custom t-shirt's for our awesome fans!</p>
-				<% if user_signed_in? %>
 				<%= link_to cart_path do%>
 			    My Cart
 			    (<span class="cart-count"><%=current_user.cart_count%></span>)
-			  <%end%>
 			  <%end%>
 			</div><!-- end title -->
 
@@ -360,10 +358,12 @@
 								<h3><a href="#"><%=product.name%></a></h3>
 								<div class="clearfix">
 									<small class="pull-left"><%=sprintf('%.2f',product.price.round(2)) %> €</small>
-									<small class="pull-right"><a href="#" class="btn btn-primary btn-sm"><%if signed_in?%>
+									<small class="pull-right"><a href="#" class="btn btn-primary btn-sm">
   <%=link_to "", class: "button", data: {target: "Add to", addUrl: add_to_cart_path(product), removeUrl: remove_from_cart_path(product)} do%>
     Add To Cart
-  <%end%>
+<%end%></a><a href="#" class="btn btn-primary btn-sm">
+  <%=link_to "", class: "button", data: {target: "Remove from", addUrl: add_to_cart_path(product), removeUrl: remove_from_cart_path(product)} do%>
+    Remove
 <%end%></a></small>
 								</div>
 							</div><!-- end shop-meta -->
