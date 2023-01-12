@@ -1,6 +1,4 @@
 class TransactionsController < ApplicationController
-  
-  before_action :check_cart!
 
   def new
     gon.client_token = generate_client_token
@@ -8,12 +6,17 @@ class TransactionsController < ApplicationController
 
   def create
     @result = Braintree::Transaction.sale(
-              amount: current_user.cart_total_price,
+              amount: session[:total_price],
               payment_method_nonce: params[:payment_method_nonce])
     if @result.success?
-      current_user.purchase_cart_products!
+      current_user.purchase_cart_products!(session[:order_id])
+      session[:order_id]=nil
+      session[:total_price]=0
       redirect_to root_url, notice: "Congratulations! Your transaction has been successful!"
     else
+      Order.destroy(session[:order_id])
+      session[:order_id]=nil
+      session[:total_price]=0
       flash[:alert] = "Something went wrong while processing your transaction. Please try again!"
       gon.client_token = generate_client_token
       render :new

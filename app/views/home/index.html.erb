@@ -337,10 +337,12 @@
 			<div class="section-title text-center clearfix">
 				<h2><i>Our</i> STORE</h2>
 				<p>Listed below our awesome store items! We design custom t-shirt's for our awesome fans!</p>
-				<%= link_to cart_path do%>
-			    My Cart
-			    (<span class="cart-count"><%=current_user.cart_count%></span>)
-			  <%end%>
+			</br>
+				<p><%= link_to cart_path do%>
+			    
+			    <h3><img src=<%=asset_url("upload/shopping-cart-icon.svg")%> width="30px"> My Cart
+			    (<span class="cart-count"><%=current_user.cart_count%></span>)</h3>
+			  <%end%></p>
 			</div><!-- end title -->
 
 			<div class="row text-center">
@@ -349,7 +351,7 @@
 					<div class="col-md-3">
 						<div class="shop-box">
 							<div class="media-element">
-								<img src=<%=asset_url('upload/shop_01.png')%> alt="" class="img-responsive">
+								<img src=<%=asset_url(product.image_link)%> alt="" class="img-responsive">
 							</div><!-- end media -->
 
 							<hr>
@@ -358,13 +360,11 @@
 								<h3><a href="#"><%=product.name%></a></h3>
 								<div class="clearfix">
 									<small class="pull-left"><%=sprintf('%.2f',product.price.round(2)) %> €</small>
-									<small class="pull-right"><a href="#" class="btn btn-primary btn-sm">
-  <%=link_to "", class: "button", data: {target: "Add to", addUrl: add_to_cart_path(product), removeUrl: remove_from_cart_path(product)} do%>
+									<small class="pull-right">
+  <%=link_to "", class: "btn btn-primary btn-sm", data: {target: "Add to", addUrl: add_to_cart_path(product), removeUrl: remove_from_cart_path(product)} do%>
     Add To Cart
-<%end%></a><a href="#" class="btn btn-primary btn-sm">
-  <%=link_to "", class: "button", data: {target: "Remove from", addUrl: add_to_cart_path(product), removeUrl: remove_from_cart_path(product)} do%>
-    Remove
-<%end%></a></small>
+<%end%>
+  </small>
 								</div>
 							</div><!-- end shop-meta -->
 						</div><!-- end shop-box -->

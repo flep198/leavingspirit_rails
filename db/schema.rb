@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_30_232107) do
+ActiveRecord::Schema.define(version: 2023_01_11_224959) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -51,6 +51,20 @@ ActiveRecord::Schema.define(version: 2022_12_30_232107) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "email", null: false
+    t.string "address_line1", null: false
+    t.string "address_line2"
+    t.string "country", null: false
+    t.boolean "newsletter", default: true, null: false
+    t.integer "buyer_id", null: false
+    t.boolean "paid", default: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -62,10 +76,11 @@ ActiveRecord::Schema.define(version: 2022_12_30_232107) do
 
   create_table "purchases", force: :cascade do |t|
     t.integer "product_id"
-    t.integer "buyer_id"
+    t.integer "order_id"
+    t.integer "count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["product_id", "buyer_id"], name: "index_purchases_on_product_id_and_buyer_id", unique: true
+    t.index ["product_id", "order_id"], name: "index_purchases_on_product_id_and_order_id", unique: true
   end
 
   create_table "users", force: :cascade do |t|

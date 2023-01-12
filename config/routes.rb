@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   get 'transactions/new'
+  resources :orders
   resources :products
   resources :concerts
   resource :cart, only: [:show] do

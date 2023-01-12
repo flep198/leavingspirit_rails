@@ -1502,3 +1502,8 @@ RESPONSIVE
         padding: 22em 0 0;
     }
 }
+
+
+.hide {
+   display: none;
+}

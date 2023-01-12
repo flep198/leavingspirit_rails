@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :purchases, foreign_key: :buyer_id
-  has_many :products, through: :purchases
+  has_many :orders, foreign_key: :buyer_id
+  has_many :purchases, through: :orders
 
   def cart_count
     $redis.llen "cart#{id}"
@@ -29,17 +29,12 @@ class User < ApplicationRecord
     cart_ids.count(product_id)
   end
 
-  def purchase_cart_products!
-    get_cart_products.each {|product| purchase(product)}
-    $redis.del "cart#{id}"
+  def purchase_cart_products!(order_id)
+    order=Order.find(order_id)
+    order.paid = true
+    order.save
+
   end
 
-  def purchase(product)
-    products << product unless purchase?(product)
-  end
-
-  def purchase?(product)
-    products.include?(product)
-  end
 
 end
