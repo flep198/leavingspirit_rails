@@ -49,6 +49,39 @@
 </head>
 <body>
 
+<header class="header first-header">
+    <div class="container">
+      <nav class="navbar navbar-default">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+
+          </div>
+          <a class="navbar-brand" href="index.html"><img src=<%=asset_url('ls_logo.png')%> alt=""></a>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-left">
+                  <li><a data-scroll href="<%=root_path+"#home"%>">Home</a></li>
+                  <li><a data-scroll href="<%=root_path+"#about"%>">History</a></li>
+                  <li><a data-scroll href="<%=root_path+"#tour"%>">Tour</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a data-scroll href="<%=root_path+"#albums"%>">Records</a></li>
+                  <li><a data-scroll href="<%=root_path+"#follow"%>">Follow</a></li>
+                  <li><a data-scroll href="<%=root_path+"#store"%>">Store</a></li>
+              </ul>
+          </div><!-- /.navbar-collapse -->
+      </nav>
+
+
+    </div><!-- ebd container -->
+  </header><!-- end header -->
+
 
 <% if alert %>
 <div class="alert alert-secondary" role="alert">
@@ -93,7 +126,6 @@
   <%= javascript_include_tag 'bootstrap_min' %>
   <%= javascript_include_tag 'parallax' %>
   <%= javascript_include_tag 'owl_carousel' %>
-  <%= javascript_include_tag 'jquery_fitvids' %>
   <%= javascript_include_tag 'scroll' %>
   <%= javascript_include_tag 'custom' %>
   <%= javascript_include_tag 'cart_editer' %>  

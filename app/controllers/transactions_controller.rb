@@ -1,5 +1,7 @@
 class TransactionsController < ApplicationController
 
+layout 'press_layout'
+
   def new
     gon.client_token = generate_client_token
   end

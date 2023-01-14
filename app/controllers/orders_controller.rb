@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   
-  before_action :check_cart!
+  before_action :check_cart!, only: [:create]
 
   def new
     @order = Order.new
@@ -16,12 +16,15 @@ class OrdersController < ApplicationController
         session[:total_price] = current_user.cart_total_price
         current_user.get_cart_products.uniq.each {|product| purchase(product,@order.id,current_user.get_number_of_product_in_cart(product))}
         $redis.del "cart#{current_user.id}"
-        format.html { redirect_to new_transaction_path }        
+        format.html { redirect_to orders_summary_path, order: @order }        
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def summary
   end
 
   private

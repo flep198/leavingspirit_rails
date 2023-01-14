@@ -5,6 +5,4 @@ class HomeController < ApplicationController
 
   end
 
-    def data_policy
-  end
 end

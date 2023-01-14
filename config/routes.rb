@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'press/agb'
   get 'press/withdrawal'
   get 'press/delivery'
+  get 'orders/summary'
   resources :orders
   resources :products
   resources :concerts

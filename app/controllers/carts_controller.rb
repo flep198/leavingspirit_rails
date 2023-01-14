@@ -1,5 +1,7 @@
 class CartsController < ApplicationController
   skip_before_action :verify_authenticity_token
+
+  layout 'press_layout'
   
   def show
     cart_ids = $redis.lrange current_user_cart, 0, -1
