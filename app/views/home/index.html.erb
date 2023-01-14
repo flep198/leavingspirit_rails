@@ -164,17 +164,17 @@
 			        <th class="col-md-3">Date</th>
 			        <th class="col-md-4">Venue</th>
 			        <th class="col-md-3">Location</th>
-			        <th class="col-md-2 text-center">Ticket</th>
+			        <th class="col-md-2 text-center">Link</th>
 			      </tr>
 			    </thead>
 			    <tbody>
 			    <% @concerts.order(date: :asc).each do |concert| %>
 			    <% if concert.date.future? %>
 			      <tr>
-			        <td class="col-md-3 tour-date"><%=concert.date%></td>
-			        <td class="col-md-4"><a href="#"><%=concert.title%></a></td>
+			        <td class="col-md-3 tour-date"><%=concert.date.strftime('%B %d, %Y')%></td>
+			        <td class="col-md-4"><a href="<%= concert.location_link%>"><%=concert.title%></a></td>
 			        <td class="col-md-3"><%=concert.location_name%></td>
-			        <td class="col-md-2 ticket-button text-center"><a href='<%=concert.ticket_link%>' class="btn btn-primary">Tickets</a></td>
+			        <td class="col-md-2 ticket-button text-center"><a href='<%=concert.ticket_link%>' class="btn btn-primary">Info</a></td>
 			      </tr>
 			    <% end %>
 			    <% end %>
@@ -182,6 +182,7 @@
 			  </table>
 			</div><!-- end tour-table -->
 		</br>
+		<div id="past-concerts-table">
 			<div class="section-title text-center clearfix">
 				<h2>Past Tour Dates</h2>
 				<p>Here is a list of shows that we played in the past!</p>
@@ -193,26 +194,26 @@
 			        <th class="col-md-3">Date</th>
 			        <th class="col-md-4">Venue</th>
 			        <th class="col-md-3">Location</th>
-			        <th class="col-md-2 text-center">Ticket</th>
+			        <th class="col-md-2 text-center">Link</th>
 			      </tr>
 			    </thead>
 			    <tbody>
 			    <% @concerts.order(date: :desc).each do |concert| %>
 			    <% if concert.date.past? %>
 			      <tr>
-			        <td class="col-md-3 tour-date"><%=concert.date%></td>
-			        <td class="col-md-4"><a href="#"><%=concert.title%></a></td>
+			        <td class="col-md-3 tour-date"><%=concert.date.strftime('%B %d, %Y')%></td>
+			        <td class="col-md-4"><a href="<%= concert.location_link%>"><%=concert.title%></a></td>
 			        <td class="col-md-3"><%=concert.location_name%></td>
-			        <td class="col-md-2 ticket-button text-center"><a href='<%=concert.ticket_link%>' class="btn btn-primary">Tickets</a></td>
+			        <td class="col-md-2 ticket-button text-center"><a href='<%=concert.ticket_link%>' class="btn btn-primary">Info</a></td>
 			      </tr>
 			    <% end %>
 			    <% end %>
 			    </tbody>
 			  </table>
 			</div><!-- end tour-table -->
-
+		</div>
 			<div class="section-button text-center">
-				<a href="concerts.html" class="btn btn-primary btn-lg">LIST OF ALL CONCERTS</a>
+				<button id="concert-button" class="btn btn-primary btn-lg">LIST ALL CONCERTS</button>
 			</div>
 		</div><!-- end container -->
 	</section><!-- end section -->

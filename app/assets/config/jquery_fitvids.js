@@ -91,6 +91,22 @@
 
       // Target your .container, .wrapper, .post, etc.
       $(".home-video").fitVids();
+
+      var show_concert_table=true;
+
+      $("#concert-button").click(function(){
+        $("#past-concerts-table").slideToggle();
+        if (show_concert_table==false){
+          $("#concert-button").html("HIDE PAST CONCERTS");
+          show_concert_table=true;
+        } else {
+          $("#concert-button").html("SHOW PAST CONCERTS");
+          show_concert_table=false;
+        }
+      });
+
+      document.getElementById('concert-button').click();
+
     });
 
     
