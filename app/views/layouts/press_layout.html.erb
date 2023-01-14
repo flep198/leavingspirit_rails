@@ -63,6 +63,30 @@
 
     <%= yield %>
 
+  <section class="footer section lb nobpad">
+        <div class="copyrights">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <p>2016 - 2023 &copy;Leaving Spirit. All rights reserved.</p>
+                        <ul class="list-inline">
+                            <li><a href="https://facebook.com/keeprockinalive">Facebook</a></li>
+                            <li><a href="https://instagram.com/leavingspirit">Instagram</a></li>
+                            <li><a href="https://tiktok.com/@leavingspirit">TikTok</a></li>
+                            <li><a href="https://youtube.com/leavingspirit">YouTube</a></li>
+                            <li><%= link_to "Press", press_path%></li>
+                        </ul>
+                        <ul class="list-inline">
+                            <li><%= link_to "Data Policy", press_data_policy_path%></li>
+                            <li><%= link_to "AGB", press_agb_path%></li>
+                            <li><%= link_to "Widerrufsbelehrung", press_withdrawal_path%></li>
+                            <li><%= link_to "Liefer/Zahlungsbedingungen", press_delivery_path%></li>
+                        </ul>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end copyrights -->
+  </section><!-- end section -->
 
   <!-- jQuery Files -->
   <%= javascript_include_tag 'jquery_min' %>

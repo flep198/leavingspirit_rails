@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   
   get 'transactions/new'
   get 'press', :to => 'press#index'
+  get 'press/data_policy'
+  get 'press/agb'
+  get 'press/withdrawal'
+  get 'press/delivery'
   resources :orders
   resources :products
   resources :concerts

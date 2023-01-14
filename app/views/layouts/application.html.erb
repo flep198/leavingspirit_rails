@@ -67,15 +67,13 @@
           <div class="collapse navbar-collapse" id="navbar-collapse-1">
               <ul class="nav navbar-nav navbar-left">
                   <li><a data-scroll href="#home">Home</a></li>
-                  <li><a data-scroll href="#news">News</a></li>
-                  <li><a data-scroll href="#about">About</a></li>
+                  <li><a data-scroll href="#about">History</a></li>
                   <li><a data-scroll href="#tour">Tour</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
                   <li><a data-scroll href="#albums">Records</a></li>
-                  <li><a data-scroll href="#media">Media</a></li>
-                  <li><a data-scroll href="#store">Store</a></li>
                   <li><a data-scroll href="#follow">Follow</a></li>
+                  <li><a data-scroll href="#store">Store</a></li>
               </ul>
           </div><!-- /.navbar-collapse -->
       </nav>
@@ -96,6 +94,31 @@
 <% end %>
 
     <%= yield %>
+
+  <section class="footer section lb nobpad">
+        <div class="copyrights">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <p>2016 - 2023 &copy;Leaving Spirit. All rights reserved.</p>
+                        <ul class="list-inline">
+                            <li><a href="https://facebook.com/keeprockinalive">Facebook</a></li>
+                            <li><a href="https://instagram.com/leavingspirit">Instagram</a></li>
+                            <li><a href="https://tiktok.com/@leavingspirit">TikTok</a></li>
+                            <li><a href="https://youtube.com/leavingspirit">YouTube</a></li>
+                            <li><%= link_to "Press", press_path%></li>
+                        </ul>
+                        <ul class="list-inline">
+                            <li><%= link_to "Data Policy", press_data_policy_path%></li>
+                            <li><%= link_to "AGB", press_agb_path%></li>
+                            <li><%= link_to "Widerrufsbelehrung", press_withdrawal_path%></li>
+                            <li><%= link_to "Liefer/Zahlungsbedingungen", press_delivery_path%></li>
+                        </ul>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end copyrights -->
+  </section><!-- end section -->
 
 
   <!-- jQuery Files -->
