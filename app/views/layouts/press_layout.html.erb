@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
+<head>
+
+    <%= include_gon %>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Site Meta -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+
+    <title>Leaving Spirit</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%#= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    
+    <%#= javascript_pack_tag "application" %>
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href=<%=asset_url('favicon.ico')%> type="image/x-icon" />
+    <link rel="apple-touch-icon" href=<%=asset_url('apple-touch-icon.png')%>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet"> 
+
+  <!-- Audio Player -->
+  <%= stylesheet_link_tag 'bar-ui' %>
+  <!--<link rel="stylesheet" href="css/bar-ui.css" />-->
+
+  <!-- Custom & Default Styles -->
+  <%= stylesheet_link_tag 'font-awesome_min' %>
+  <%= stylesheet_link_tag 'bootstrap_min' %>
+  <%= stylesheet_link_tag 'carousel' %>
+  <%= stylesheet_link_tag 'style' %>
+
+</head>
+<body>
+
+
+<% if alert %>
+<div class="alert alert-secondary" role="alert">
+  <%= alert %>
+</div>
+<% end %>
+<% if notice %>
+<div class="alert alert-secondary" role="alert">
+  <%= notice %>
+</div>
+<% end %>
+
+    <%= yield %>
+
+
+  <!-- jQuery Files -->
+  <%= javascript_include_tag 'jquery_min' %>
+  <%= javascript_include_tag 'bootstrap_min' %>
+  <%= javascript_include_tag 'parallax' %>
+  <%= javascript_include_tag 'owl_carousel' %>
+  <%= javascript_include_tag 'jquery_fitvids' %>
+  <%= javascript_include_tag 'scroll' %>
+  <%= javascript_include_tag 'custom' %>
+  <%= javascript_include_tag 'cart_editer' %>  
+  <%= javascript_include_tag 'cart_adder' %> 
+  <%= javascript_include_tag 'transactions' %> 
+
+  <!-- JavaScript SDK for Braintree -->
+  <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+
+  </body>
+</html>

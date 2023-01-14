@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   get 'transactions/new'
+  get 'press', :to => 'press#index'
   resources :orders
   resources :products
   resources :concerts
