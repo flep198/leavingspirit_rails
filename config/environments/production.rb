@@ -123,7 +123,10 @@ Rails.application.configure do
   config.hosts << "www.leavingspirit.de"
   config.hosts << "leavingspirit.de"
 
-  @url_prefix="https"
-#DEVISE CONFIGURATION!!!!
+  
+DEVISE CONFIGURATION!!!!
+  config.to_prepare { Devise::SessionsController.force_ssl }
+  config.to_prepare { Devise::RegistrationsController.force_ssl }
+  config.to_prepare { Devise::PasswordsController.force_ssl }
   #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end
