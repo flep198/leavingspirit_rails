@@ -492,6 +492,10 @@
 		<div class="container">
 			<div class="section-title text-center clearfix">
 				<h2><i>Our</i> STORE</h2>
+
+				<% if Rails.env.production? %>
+				<p>Coming soon!</p>
+				<% else %>
 				<p>Listed below our awesome store items! We design custom t-shirt's for our awesome fans!</p>
 			</br>
 				<p><%= link_to cart_path do%>
@@ -525,6 +529,7 @@
 							</div><!-- end shop-meta -->
 						</div><!-- end shop-box -->
 					</div><!-- end col -->
+				<%end%>
 				<%end%>
 
 		</div><!-- end container -->
