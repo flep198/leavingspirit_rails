@@ -1,11 +1,5 @@
 
-<% if Rails.env.production? %>
-<% url_prefix="https" %>
-<% else %>
-<% url_prefix="http" %>
-<% end %>
-
-<section id="home" class="parallax section first-section" data-stellar-background-ratio="0.9" style="background-image:url(<%=asset_url('background.jpg').gsub('http', url_prefix)%>);">
+<section id="home" class="parallax section first-section" data-stellar-background-ratio="0.9" style="background-image:url(<%=asset_url('background.jpg')%>);">
 		<div class="index-image-overlay"></div>
 		<div class="customtitle">
 			<%= image_tag "ls_logo.png", class: "img-responsive"%>
@@ -91,7 +85,7 @@
 				<div class="col-md-2">
 					<div class="teambox clearfix">
 						<div class="member">
-							<img src=<%=asset_url('upload/member_01.jpg').gsub('http', url_prefix)%> alt="" class="alignleft">
+							<img src=<%=asset_url('upload/member_01.jpg')%> alt="" class="alignleft">
 							<i class="flaticon-karaoke"></i>
 						</div>
 						<h4>Vocals</h4>
@@ -102,7 +96,7 @@
 				<div class="col-md-2">
 					<div class="teambox clearfix">
 						<div class="member">
-							<img src=<%=asset_url('upload/member_03.jpg').gsub('http', url_prefix)%> alt="" class="alignleft">
+							<img src=<%=asset_url('upload/member_03.jpg')%> alt="" class="alignleft">
 							<i class="flaticon-electric-guitar"></i>
 						</div>
 						<h4>Guitars</h4>
@@ -113,7 +107,7 @@
 				<div class="col-md-2">
 					<div class="teambox clearfix">
 						<div class="member">
-							<img src=<%=asset_url('upload/member_02.jpg').gsub('http', url_prefix)%> alt="" class="alignleft">
+							<img src=<%=asset_url('upload/member_02.jpg')%> alt="" class="alignleft">
 							<i class="flaticon-saxophone"></i>
 						</div>
 						<h4>Hammond/Piano</h4>
@@ -124,7 +118,7 @@
 				<div class="col-md-2">
 					<div class="teambox clearfix">
 						<div class="member">
-							<img src=<%=asset_url('upload/member_03.jpg').gsub('http', url_prefix)%> alt="" class="alignleft">
+							<img src=<%=asset_url('upload/member_03.jpg')%> alt="" class="alignleft">
 							<i class="flaticon-electric-guitar"></i>
 						</div>
 						<h4>Guitars</h4>
@@ -135,7 +129,7 @@
 				<div class="col-md-2">
 					<div class="teambox clearfix">
 						<div class="member">
-							<img src=<%=asset_url('upload/member_03.jpg').gsub('http', url_prefix)%> alt="" class="alignleft">
+							<img src=<%=asset_url('upload/member_03.jpg')%> alt="" class="alignleft">
 							<i class="flaticon-electric-guitar"></i>
 						</div>
 						<h4>Bass</h4>
@@ -146,7 +140,7 @@
 				<div class="col-md-2">
 					<div class="teambox clearfix">
 						<div class="member">
-							<img src=<%=asset_url('upload/member_04.jpg').gsub('http', url_prefix)%> alt="" class="alignleft">
+							<img src=<%=asset_url('upload/member_04.jpg')%> alt="" class="alignleft">
 							<i class="flaticon-drum-set"></i>
 						</div>
 						<h4>Drums</h4>
@@ -239,7 +233,7 @@
 						<a class="grid__link" href="#album-1">
 							<div class="img-wrap img-wrap--grid">
 								<svg class="lp lp--grid"></svg>
-								<input type="image" id="album-modal-button-0" class="img img--grid img-responsive" src=<%=asset_url('100percent.jpg').gsub('http', url_prefix)%> alt="100percent" />
+								<input type="image" id="album-modal-button-0" class="img img--grid img-responsive" src=<%=asset_url('100percent.jpg')%> alt="100percent" />
 							</div>
 							<span class="year">2022</span>
 							<h2 class="artist">Leaving Spirit</h2>
@@ -256,7 +250,7 @@
     				<div class="row">
     					<div class="col-md-6 text-center">
     						<h3>100% Leaving Spirit (Album, 2022)</h3>
-    						<img src=<%=asset_url('100percent.jpg').gsub('http', url_prefix)%> class="img-responsive" width="100%">
+    						<img src=<%=asset_url('100percent.jpg')%> class="img-responsive" width="100%">
     						<p>This time we have decided to do it all on our own. From the recording to the mixing stages and also the mastering and cover-art is a 100% Leaving Spirit Original!</p>
     					</div>	
     					<div class="col-md-6 text-center">
@@ -281,7 +275,7 @@
 						<a class="grid__link" href="#album-1">
 							<div class="img-wrap img-wrap--grid">
 								<svg class="lp lp--grid"></svg>
-								<input type="image" id="album-modal-button-1" class="img img--grid" src=<%=asset_url('refrigeratorblues.jpg').gsub('http', url_prefix)%> alt="refrigeratorblues" />
+								<input type="image" id="album-modal-button-1" class="img img--grid" src=<%=asset_url('refrigeratorblues.jpg')%> alt="refrigeratorblues" />
 							</div>
 							<span class="year">2021</span>
 							<h2 class="artist">Leaving Spirit</h2>
@@ -298,7 +292,7 @@
     				<div class="row">
     					<div class="col-md-6 text-center">
     						<h3>Refrigerator Blues (Single, 2021)</h3>
-    						<img src=<%=asset_url('refrigeratorblues.jpg').gsub('http', url_prefix)%> class="img-responsive" width="100%">
+    						<img src=<%=asset_url('refrigeratorblues.jpg')%> class="img-responsive" width="100%">
     						<p>The cover-art shows the famous "Leaving Spirit" Refrigerator from Flo's great-grandma.</p>
     					</div>	
     					<div class="col-md-6 text-center">
@@ -317,7 +311,7 @@
 						<a class="grid__link" href="#album-1">
 							<div class="img-wrap img-wrap--grid">
 								<svg class="lp lp--grid"></svg>
-								<input type="image" id="album-modal-button-2" class="img img--grid" src=<%=asset_url('mythofthedeltablues.jpg').gsub('http', url_prefix)%> alt="mythofthedeltablues" />
+								<input type="image" id="album-modal-button-2" class="img img--grid" src=<%=asset_url('mythofthedeltablues.jpg')%> alt="mythofthedeltablues" />
 							</div>
 							<span class="year">2021</span>
 							<h2 class="artist">Leaving Spirit</h2>
@@ -334,7 +328,7 @@
     				<div class="row">
     					<div class="col-md-6 text-center">
     						<h3>Myth of the Delta Blues (Single, 2021)</h3>
-    						<img src=<%=asset_url('mythofthedeltablues.jpg').gsub('http', url_prefix)%> class="img-responsive" width="100%">
+    						<img src=<%=asset_url('mythofthedeltablues.jpg')%> class="img-responsive" width="100%">
     						<p>The cover-art is a sketch by Paula of famous blues man Robert Johnson standing at the famous crossroads where he sold his soul to the devil.</p>
     					</div>	
     					<div class="col-md-6 text-center">
@@ -351,7 +345,7 @@
 						<a class="grid__link" href="#album-1">
 							<div class="img-wrap img-wrap--grid">
 								<svg class="lp lp--grid"></svg>
-								<input type="image" id="album-modal-button-3" class="img img--grid" src=<%=asset_url('cometogether.jpg').gsub('http', url_prefix)%> alt="thingschange" />
+								<input type="image" id="album-modal-button-3" class="img img--grid" src=<%=asset_url('cometogether.jpg')%> alt="thingschange" />
 							</div>
 							<span class="year">2021</span>
 							<h2 class="artist">Leaving Spirit</h2>
@@ -368,7 +362,7 @@
     				<div class="row">
     					<div class="col-md-6 text-center">
     						<h3>Come Together (Single, 2021)</h3>
-    						<img src=<%=asset_url('cometogether.jpg').gsub('http', url_prefix)%> class="img-responsive" width="100%">
+    						<img src=<%=asset_url('cometogether.jpg')%> class="img-responsive" width="100%">
     						<p>With this cover-art we are paying tribute to the Beatles!</p>
     					</div>	
     					<div class="col-md-6 text-center">
@@ -386,7 +380,7 @@
 						<a class="grid__link" href="#album-1">
 							<div class="img-wrap img-wrap--grid">
 								<svg class="lp lp--grid"></svg>
-								<input type="image" id="album-modal-button-4" class="img img--grid" src=<%=asset_url('acousticgardensessions.jpg').gsub('http', url_prefix)%> alt="album1" />
+								<input type="image" id="album-modal-button-4" class="img img--grid" src=<%=asset_url('acousticgardensessions.jpg')%> alt="album1" />
 							</div>
 							<span class="year">2020</span>
 							<h2 class="artist">Leaving Spirit</h2>
@@ -403,7 +397,7 @@
     				<div class="row">
     					<div class="col-md-6 text-center">
     						<h3>Acoustic Garden Sessions (Album, 2020)</h3>
-    						<img src=<%=asset_url('acousticgardensessions.jpg').gsub('http', url_prefix)%> class="img-responsive" width="100%">
+    						<img src=<%=asset_url('acousticgardensessions.jpg')%> class="img-responsive" width="100%">
     						<p>We came together on a sunny day in Würzburg to play some covers and originals in an all-acoustic setup. You might even notice some interesting background sounds ;)</p>
     					</div>	
     					<div class="col-md-6 text-center">
@@ -428,7 +422,7 @@
 						<a class="grid__link" href="#album-1">
 							<div class="img-wrap img-wrap--grid">
 								<svg class="lp lp--grid"></svg>
-								<input type="image" id="album-modal-button-5" class="img img--grid" src=<%=asset_url('thingschange.jpg').gsub('http', url_prefix)%> alt="thingschange" />
+								<input type="image" id="album-modal-button-5" class="img img--grid" src=<%=asset_url('thingschange.jpg')%> alt="thingschange" />
 							</div>
 							<span class="year">2019</span>
 							<h2 class="artist">Leaving Spirit</h2>
@@ -445,7 +439,7 @@
     				<div class="row">
     					<div class="col-md-6 text-center">
     						<h3>Things Change (Album, 2019)</h3>
-    						<img src=<%=asset_url('thingschange.jpg').gsub('http', url_prefix)%> class="img-responsive" width="100%">
+    						<img src=<%=asset_url('thingschange.jpg')%> class="img-responsive" width="100%">
     						<p>Our first album! We put a lot of work into this and it turned out quite well, don't you think? Thanks to Nico from Spiral Music Studio for the great production and of course to Paula for the beautiful artwork!</p>
     					</div>	
     					<div class="col-md-6 text-center">
@@ -502,7 +496,7 @@
 			</br>
 				<p><%= link_to cart_path do%>
 			    
-			    <h3><img src=<%=asset_url("upload/shopping-cart-icon.svg").gsub('http', url_prefix)%> width="30px"> My Cart
+			    <h3><img src=<%=asset_url("upload/shopping-cart-icon.svg")%> width="30px"> My Cart
 			    (<span class="cart-count"><%=current_user.cart_count%></span>)</h3>
 			  <%end%></p>
 			</div><!-- end title -->
@@ -513,7 +507,7 @@
 					<div class="col-md-3">
 						<div class="shop-box">
 							<div class="media-element">
-								<img src=<%=asset_url(product.image_link).gsub('http', url_prefix)%> alt="" class="img-responsive">
+								<img src=<%=asset_url(product.image_link)%> alt="" class="img-responsive">
 							</div><!-- end media -->
 
 							<hr>
