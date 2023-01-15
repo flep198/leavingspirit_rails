@@ -109,4 +109,42 @@
 
     });
 
+// Get the modal
+var modal0 = document.getElementById("album-modal-0");
+var btn0 = document.getElementById("album-modal-button-0");
+var span0 = document.getElementById("close-modal-0");
+btn0.onclick = function() {modal0.style.display = "block";}
+span0.onclick = function() {modal0.style.display = "none";}
+window.onclick = function(event) {if (event.target == modal0) {modal0.style.display = "none";}} 
+var modal1 = document.getElementById("album-modal-1");
+var btn1 = document.getElementById("album-modal-button-1");
+var span1 = document.getElementById("close-modal-1");
+btn1.onclick = function() {modal1.style.display = "block";}
+span1.onclick = function() {modal1.style.display = "none";}
+window.onclick = function(event) {if (event.target == modal1) {modal1.style.display = "none";}} 
+var modal2 = document.getElementById("album-modal-2");
+var btn2 = document.getElementById("album-modal-button-2");
+var span2 = document.getElementById("close-modal-2");
+btn2.onclick = function() {modal2.style.display = "block";}
+span2.onclick = function() {modal2.style.display = "none";}
+window.onclick = function(event) {if (event.target == modal2) {modal2.style.display = "none";}} 
+var modal3 = document.getElementById("album-modal-3");
+var btn3 = document.getElementById("album-modal-button-3");
+var span3 = document.getElementById("close-modal-3");
+btn3.onclick = function() {modal3.style.display = "block";}
+span3.onclick = function() {modal3.style.display = "none";}
+window.onclick = function(event) {if (event.target == modal3) {modal3.style.display = "none";}} 
+var modal4 = document.getElementById("album-modal-4");
+var btn4 = document.getElementById("album-modal-button-4");
+var span4 = document.getElementById("close-modal-4");
+btn4.onclick = function() {modal4.style.display = "block";}
+span4.onclick = function() {modal4.style.display = "none";}
+window.onclick = function(event) {if (event.target == modal4) {modal4.style.display = "none";}} 
+var modal5 = document.getElementById("album-modal-5");
+var btn5 = document.getElementById("album-modal-button-5");
+var span5 = document.getElementById("close-modal-5");
+btn5.onclick = function() {modal5.style.display = "block";}
+span5.onclick = function() {modal5.style.display = "none";}
+window.onclick = function(event) {if (event.target == modal5) {modal5.style.display = "none";}} 
+
     

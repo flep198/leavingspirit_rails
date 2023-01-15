@@ -122,6 +122,8 @@ Rails.application.configure do
   config.hosts << "leavingspirit.rocks"
   config.hosts << "www.leavingspirit.de"
   config.hosts << "leavingspirit.de"
+
+  @url_prefix="https"
 #DEVISE CONFIGURATION!!!!
   #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end

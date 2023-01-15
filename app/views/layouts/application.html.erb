@@ -3,6 +3,12 @@
 <!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
 <head>
 
+  <% if Rails.env.production? %>
+<% url_prefix="https" %>
+<% else %>
+<% url_prefix="http" %>
+<% end %>
+
     <%= include_gon %>
 
     <!-- Basic -->
@@ -30,8 +36,8 @@
     <%#= javascript_pack_tag "application" %>
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href=<%=asset_url('favicon.ico').gsub('http', 'https')%> type="image/x-icon" />
-    <link rel="apple-touch-icon" href=<%=asset_url('apple-touch-icon.png').gsub('http', 'https')%>
+    <link rel="shortcut icon" href=<%=asset_url('favicon.ico').gsub('http', url_prefix)%> type="image/x-icon" />
+    <link rel="apple-touch-icon" href=<%=asset_url('apple-touch-icon.png').gsub('http', url_prefix)%>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet"> 
@@ -62,7 +68,7 @@
               </button>
 
           </div>
-          <a class="navbar-brand" href="index.html"><img src=<%=asset_url('ls_logo.png').gsub('http', 'https')%> alt=""></a>
+          <a class="navbar-brand" href="index.html"><img src=<%=asset_url('ls_logo.png').gsub('http', url_prefix)%> alt=""></a>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="navbar-collapse-1">
               <ul class="nav navbar-nav navbar-left">
