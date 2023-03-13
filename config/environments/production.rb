@@ -59,7 +59,7 @@ Rails.application.configure do
   # config.cache_store = :mem_cache_store
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
-  # config.active_job.queue_adapter     = :resque
+  config.active_job.queue_adapter     = :async
   # config.active_job.queue_name_prefix = "leavingspirit_production"
 
   config.action_mailer.perform_caching = false
@@ -125,5 +125,5 @@ Rails.application.configure do
 
   
 #DEVISE CONFIGURATION!!!!
-  #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'leavingspirit.rocks', port: 443 }
 end
