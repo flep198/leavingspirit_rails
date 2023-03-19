@@ -487,17 +487,12 @@
 		<div class="container">
 			<div class="section-title text-center clearfix">
 				<h2><i>Our</i> STORE</h2>
-
-				<% if Rails.env.production? %>
-				<p>Coming soon!</p>
-				<% else %>
-				<p>Listed below our awesome store items! We design custom t-shirt's for our awesome fans!</p>
+				<p>Listed below our awesome store items! Get your hands on some exclusive merch and our records!</p>
 			</br>
 				<p><%= link_to cart_path do%>
 			    
 			    <h3><img src=<%=asset_url("upload/shopping-cart-icon.svg")%> width="30px"> My Cart
-			    (<span class="cart-count"><%=current_user.cart_count%></span>)</h3>
-			  <%end%></p>
+			    (<span class="cart-count"><%=current_user.cart_count%></span>)</h3></p>
 			</div><!-- end title -->
 
 			<div class="row text-center">
