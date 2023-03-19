@@ -2,7 +2,7 @@ class Order < ApplicationRecord
 	has_many :purchases, foreign_key: :order_id
 	has_many :products, through: :purchases
 	belongs_to :buyer, class_name:"User"
-  validates_presence_of :terms_of_service, accpetance: { message: "must be accepted"}
+  validates_presence_of :terms_of_service, acceptance: { message: "must be accepted"}
   validates_presence_of :first_name, acceptance: { message: "must be entered"}
   validates_presence_of :last_name, acceptance: { message: "must be entered"}
   validates_presence_of :email, acceptance: { message: "must be entered"}
