@@ -126,4 +126,5 @@ Rails.application.configure do
   
 #DEVISE CONFIGURATION!!!!
   config.action_mailer.default_url_options = { host: 'leavingspirit.rocks', port: 443 }
+  config.action_mailer.asset_host = "https://leavingspirit.rocks"
 end
