@@ -10,7 +10,6 @@
         type: 'put',
         success: function(data) {
           $('.cart-count').html(data);
-          //return $this.closest('.cart-product').slideUp();
         }
       });
     });

@@ -42,7 +42,7 @@ class OrdersController < ApplicationController
     end
 
     def order_params
-      params.require(:order).permit(:first_name,:last_name,:email,:address_line1,:address_line2,:country,:newsletter,:buyer_id)
+      params.require(:order).permit(:first_name,:last_name,:email,:address_line1,:address_line2,:country,:newsletter,:buyer_id,:terms_of_service)
     end
 
 

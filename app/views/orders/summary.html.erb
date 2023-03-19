@@ -5,13 +5,13 @@
 	<div class="container">
     <div id="mycart" class="small-10 small-centered medium-8 large-8 column">
   <div class="p1 glassy-bg mb1 text-center radius-l1 radius-r1">
-    <h4>Thanks for your order!</h4>
+    <h4>Thanks for your order! Please check your e-mails for confirmation and payment instructions!</h4>
     <h4>Order number: <%=session[:order_id]%>
   </div>
   
 </br>
 <div class="row">
-  <div class="col-md-2"></div>
+  <!--
   <div class="col-md-4">
     <div class="text-center">
     <h3><%=link_to "Pay Now (Credit Card/PayPal)", new_transaction_path, class: "btn btn-primary"%> <h3>
@@ -19,6 +19,6 @@
   </div>
   <div class="col-md-4">
     <h3><%=link_to "Pay Later", root_path, class: "btn btn-primary"%> (Total: <%=session[:total_price]%> €)<h3>
-</div>
+  </div>-->
 </div>
 </section>

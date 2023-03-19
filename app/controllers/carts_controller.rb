@@ -10,12 +10,12 @@ class CartsController < ApplicationController
 
   def add
     $redis.lpush current_user_cart, params[:product_id]
-    render json: current_user.cart_count, status: 200
+    render json: [current_user.cart_count,current_user.cart_total_price, params[:product_id], current_user.get_number_of_product_in_cart(Product.find(params[:product_id]))], status: 200
   end
 
   def remove
     $redis.lrem current_user_cart, 1, params[:product_id]
-    render json: current_user.cart_count, status: 200
+    render json: [current_user.cart_count,current_user.cart_total_price, params[:product_id], current_user.get_number_of_product_in_cart(Product.find(params[:product_id]))], status: 200
   end
 
   private

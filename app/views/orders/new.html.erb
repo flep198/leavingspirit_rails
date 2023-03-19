@@ -23,51 +23,66 @@
     </div>
   <% end %>
 
-  <div class="mb-3">
-    <%= form.label :first_name, class: "form-label" %>
-    <%= form.text_field :first_name, :input_html => {:minlength => 1 , maxlength: 30, class: "form-control"} %>
-  </div>
+  <div class="container">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-4">
+      <div class="mb-3">
+        <%= form.label :first_name, class: "form-label" %>
+        <%= form.text_field :first_name, :input_html => {:minlength => 1 , maxlength: 30, class: "form-control", require: true} %>
+      </div>
 
-  <div class="mb-3">
-    <%= form.label :last_name, class: "form-label" %>
-    <%= form.text_field :last_name, :input_html => {:minlength => 1 , maxlength: 30, class: "form-control"} %>
-  </div>
+      <div class="mb-3">
+        <%= form.label :last_name, class: "form-label" %>
+        <%= form.text_field :last_name, :input_html => {:minlength => 1 , maxlength: 30, class: "form-control", require: true} %>
+      </div>
 
-  <div class="mb-3">
-    <%= form.label :email, class: "form-label" %>
-    <%= form.text_field :email, :input_html => {:minlength => 1 , maxlength: 30, class: "form-control"} %>
-  </div>
+      <div class="mb-3">
+        <%= form.label :email, class: "form-label" %>
+        <%= form.text_field :email, :input_html => {:minlength => 1 , maxlength: 30, class: "form-control", require: true} %>
+      </div>
 
-  <div class="mb-3">
-    <%= form.label :address_line1, class: "form-label" %>
-    <%= form.text_field :address_line1, :input_html => {:minlength => 1 , maxlength: 30, class: "form-control"} %>
-  </div>
+      <div class="mb-3">
+        <%= form.label :address_line1, class: "form-label" %>
+        <%= form.text_field :address_line1, :input_html => {:minlength => 1 , maxlength: 30, class: "form-control", require: true} %>
+      </div>
 
-  <div class="mb-3">
-    <%= form.label :address_line2, class: "form-label" %>
-    <%= form.text_field :address_line2, :input_html => {:minlength => 1 , maxlength: 30, class: "form-control"} %>
-  </div>
+      <div class="mb-3">
+        <%= form.label :address_line2, class: "form-label" %>
+        <%= form.text_field :address_line2, :input_html => {:minlength => 1 , maxlength: 30, class: "form-control"} %>
+      </div>
 
-  <div class="mb-3">
-    <%= form.label :country, class: "form-label" %>
-    <%= form.text_field :country, :input_html => {:minlength => 1 , maxlength: 30, class: "form-control"} %>
-  </div>
+      <div class="mb-3">
+        <%= form.label :country, class: "form-label" %>
+        <%= form.select :country, ["Albania","Andorra","Armenia","Austria","Azerbaijan","Belarus","Belgium","Bosnia and Herzegovina","Bulgaria","Croatia",
+          "Cyprus","Czech Republic","Denmark","Estonia","Finland","France","Georgia","Germany","Greece","Hungary","Iceland","Ireland","Italy","Kosovo","Latvia",
+          "Liechtenstein","Lithuania","Luxembourg","Macedonia","Malta","Moldova","Monaco","Montenegro","The Netherlands","Norway","Poland","Portugal","Romania",
+          "Russia","San Marino","Serbia","Slovakia","Slovenia","Spain","Sweden","Switzerland","Turkey","Ukraine","United Kingdom","Vatican City"] %>
+      </div>
 
-  <div class="mb-3">
-    <%= form.label "Newsletter" %> 
-    <%= form.check_box :newsletter %> <br />
-  </div>
+      <div class="mb-3">
+        <%= form.label "Newsletter" %> 
+        <%= form.check_box :newsletter %> <br />
+      </div>
 
-  <div class="hide">
-    <%= form.label :buyer_id, class: "form-label" %>
-    <%= form.number_field :buyer_id, class: "form-control" , value:current_user.id%>
-  </div>
+      <div class="mb-3">
+        <%= form.label "Terms of service" %> 
+        <%= form.check_box :terms_of_service, required: true  %> <br />
+      </div>
 
-</br>
-  <div class="text-center">
-  <h3><%=form.submit "Place Order (payment required)", class: "btn btn-primary" unless current_user.get_cart_products.blank?%> (Total: <%=current_user.cart_total_price%> €)<h3>
+      <div class="hide">
+        <%= form.number_field :buyer_id, class: "form-control" , value:current_user.id%>
+      </div>
+    </div>
+    <div class="col-md-5">
+    </div>
   </div>
-</div>
+  </br>
+    <div class="text-center">
+    <h3><%=form.submit "Place Order (payment required)", class: "btn btn-primary" unless current_user.get_cart_products.blank?%> (Total: <%=current_user.cart_total_price%> €)<h3>
+    </div>
+  </div>
+  
 </div>
 </section>
 

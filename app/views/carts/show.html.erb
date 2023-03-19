@@ -12,13 +12,13 @@
 
   <% @cart_products.each do |product|%>
 
-  <div class="shop-box">
+  <div class="shop-box-<%=product.id%>">
               <hr>
               <div class="shop-meta">
                 <h3><a href="#"><%=product.name%></a></h3>
 
                 <div class="clearfix">
-                  <small class="pull-left"><%= @n_prod=current_user.get_number_of_product_in_cart(product)%> x <%=sprintf('%.2f',product.price.round(2)) %> €</small>
+                  <small class="pull-left"><span class="product-number-<%=product.id%>"><%= @n_prod=current_user.get_number_of_product_in_cart(product)%></span> x <%=sprintf('%.2f',product.price.round(2)) %> €</small>
                   <small class="pull-right">
   <%=link_to "", class: "btn btn-primary btn-sm", data: {target: "Add to", addUrl: add_to_cart_path(product), removeUrl: remove_from_cart_path(product)} do%>
     Add To Cart
@@ -33,7 +33,7 @@
 <% end %>
 </br>
   <div class="text-center">
-  <h3><%=link_to "Checkout", new_order_path, class: "btn btn-primary" unless current_user.get_cart_products.blank?%> (Total: <%=current_user.cart_total_price%> €)<h3>
+  <h3><%=link_to "Checkout", new_order_path, class: "btn btn-primary" unless current_user.get_cart_products.blank?%> (Total: <span class="total-price"><%=current_user.cart_total_price%></span> €)<h3>
   </div>
 </div>
 </div>
