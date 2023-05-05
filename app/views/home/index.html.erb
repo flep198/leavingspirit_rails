@@ -165,7 +165,7 @@
 			    </thead>
 			    <tbody>
 			    <% @concerts.order(date: :asc).each do |concert| %>
-			    <% if concert.date.future? %>
+			    <% unless concert.date.past? %>
 			      <tr>
 			        <td class="col-md-3 tour-date"><%=concert.date.strftime('%B %d, %Y')%></td>
 			        <td class="col-md-4"><a href="<%= concert.location_link%>"><%=concert.title%></a></td>
