@@ -16,7 +16,8 @@ class OrdersController < ApplicationController
         session[:total_price] = current_user.cart_total_price
         current_user.get_cart_products.uniq.each {|product| purchase(product,@order.id,current_user.get_number_of_product_in_cart(product))}
         $redis.del "cart#{current_user.id}"
-        OrderConfirmationMailer.with(user: current_user, order: @order).order_confirmation_email.deliver_later
+        OrderConfirmationMailer.with(user: current_user, order: @order).order_confirmation_email.deliver_now
+        OrderConfirmationMailer.with(user: current_user, order: @order).order_info_email.deliver_now
         format.html { redirect_to orders_summary_path, order: @order }        
       else
         format.html { render :new, status: :unprocessable_entity }
