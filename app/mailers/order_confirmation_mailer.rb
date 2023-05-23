@@ -7,9 +7,4 @@ class OrderConfirmationMailer < ApplicationMailer
 		
 	end
 
-	def order_info_email
-		@order = params[:order]
-		mail(to:"florian.eppel@gmx.de", subject: "New Order for Leaving Spirit")
-	end
-
 end
