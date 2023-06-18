@@ -21,11 +21,13 @@ ActiveAdmin.register Concert do
     f.inputs do
       f.input :date, :start_year => 2016
       f.input :time
+      f.input :title
       f.input :fb_link
       f.input :coordinates
       f.input :location_name
+      f.input :location_link
       f.input :ticket_link
-      f.input :title
+      
     end
     f.actions
   end
