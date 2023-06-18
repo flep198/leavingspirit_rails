@@ -16,5 +16,18 @@ ActiveAdmin.register Concert do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
+
+  form do |f|
+    f.inputs do
+      f.input :date, :start_year => 2016
+      f.input :time
+      f.input :fb_link
+      f.input :coordinates
+      f.input :location_name
+      f.input :ticket_link
+      f.input :title
+    end
+    f.actions
+  end
   
 end
