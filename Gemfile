@@ -26,7 +26,7 @@ gem 'redis', '~> 3.1.0'
 gem 'braintree'
 gem 'figaro'
 gem 'gon'
-
+gem 'stripe'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

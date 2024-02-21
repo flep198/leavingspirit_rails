@@ -1,0 +1,30 @@
+<section id="placeholder" class="section"></section>
+
+<section id="media" class="section wb">
+	<div class="container">
+
+		<div class="form-container radius-box glassy-bg small-10 small-centered medium-8 large-6 columns">
+		  <h2 class="mbs">Payment</h2>
+
+			<%= form_tag charges_path do %>
+			  <article>
+			    <% if flash[:error].present? %>
+			      <div id="error_explanation">
+			        <p><%= flash[:error] %></p>
+			      </div>
+			    <% end %>
+			    <label class="amount">
+			      <span>Amount: <%=session[:total_price]%>€</span>
+			    </label>
+			  </article>
+
+			  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+			          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+			          data-description="Checkout"
+			          data-amount=<%=(session[:total_price].to_f*100).to_s%>
+			          data-currency="eur"
+			          data-locale="auto"></script>
+			<% end %>
+		</div>
+	</div>
+</section>

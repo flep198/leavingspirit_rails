@@ -11,14 +11,13 @@
   
 </br>
 <div class="row">
-  <!--
   <div class="col-md-4">
     <div class="text-center">
-    <h3><%=link_to "Pay Now (Credit Card/PayPal)", new_transaction_path, class: "btn btn-primary"%> <h3>
+    <h3><%=link_to "Pay Now (Credit Card/PayPal)", new_charge_path, class: "btn btn-primary"%> <h3>
     </div>
   </div>
   <div class="col-md-4">
-    <h3><%=link_to "Pay Later", root_path, class: "btn btn-primary"%> (Total: <%=session[:total_price]%> €)<h3>
-  </div>-->
+    <h3><%=link_to "Pay via Bank", root_path, class: "btn btn-primary"%> (Total: <%=session[:total_price]%> €)<h3>
+  </div>
 </div>
 </section>

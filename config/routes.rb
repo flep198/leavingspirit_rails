@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'charges/new'
+  get 'charges/create'
   get 'transactions/new'
   get 'press', :to => 'press#index'
   get 'press/data_policy'
@@ -20,5 +22,6 @@ Rails.application.routes.draw do
   devise_for :users
   get 'home/index'
   root 'home#index'
+  resources :charges, only: [:new, :create]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
