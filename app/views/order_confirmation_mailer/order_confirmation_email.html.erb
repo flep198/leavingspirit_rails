@@ -76,7 +76,7 @@
 <p style="font-size: 14px; line-height: 1.5; mso-line-height-alt: 21px; margin: 0;">&nbsp;</p>
 <p style="font-size: 14px; line-height: 1.5; mso-line-height-alt: 21px; margin: 0;">thanks a lot for placing an order at our web shop and supporting our music. This email is to confirm that we have received your order (Order Number <%=@order.id%>).</p>
 <p style="font-size: 14px; line-height: 1.5; mso-line-height-alt: 21px; margin: 0;">&nbsp;</p>
-<p style="font-size: 14px; line-height: 1.5; mso-line-height-alt: 21px; margin: 0;">Before we can process and ship your order, please transfer the total amount of <%=sprintf('%.2f',@order.total_price.round(2))%> € to our bank account (Florian Eppel, DE03 7905 0000 0047 5610 30) or for faster processing directly via <a href="https://paypal.me/flep98/<%=sprintf('%.2f',@order.total_price.round(2))%>">PayPal</a>. Don't forget to tell us your order number when you transfer the money.</p>
+<p style="font-size: 14px; line-height: 1.5; mso-line-height-alt: 21px; margin: 0;">Before we can process and ship your order, make sure to pay the total amount <%=sprintf('%.2f',@order.total_price.round(2))%>. If you have already paid, just wait for shipment confirmation, we are usually trying to ship our merch within a few days. If there were problems with the payment, just reply to this mail and we will find a solution.</p>
 <p style="font-size: 14px; line-height: 1.5; mso-line-height-alt: 21px; margin: 0;">&nbsp;</p>
 <p style="font-size: 14px; line-height: 1.5; mso-line-height-alt: 21px; margin: 0;">Thanks,</p>
 </div>
