@@ -36,6 +36,8 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet"> 
+  
+  <script src="https://js.stripe.com/v3/"></script>
 
   <!-- Audio Player -->
   <%= stylesheet_link_tag 'bar-ui' %>
@@ -67,14 +69,14 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="navbar-collapse-1">
               <ul class="nav navbar-nav navbar-left">
-                  <li><a data-scroll href="#home">Home</a></li>
-                  <li><a data-scroll href="#about">History</a></li>
-                  <li><a data-scroll href="#tour">Tour</a></li>
+                  <li><a data-scroll href="<%=request.base_url%>#home">Home</a></li>
+                  <li><a data-scroll href="<%=request.base_url%>#about">History</a></li>
+                  <li><a data-scroll href="<%=request.base_url%>#tour">Tour</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                  <li><a data-scroll href="#albums">Records</a></li>
-                  <li><a data-scroll href="#store">Store</a></li>
-                  <li><a data-scroll href="press">Press</a></li>
+                  <li><a data-scroll href="<%=request.base_url%>#albums">Records</a></li>
+                  <li><a data-scroll href="<%=request.base_url%>#store">Store</a></li>
+                  <li><a data-scroll href="<%=request.base_url%>press">Press</a></li>
               </ul>
           </div><!-- /.navbar-collapse -->
       </nav>

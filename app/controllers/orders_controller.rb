@@ -17,7 +17,7 @@ class OrdersController < ApplicationController
         current_user.get_cart_products.uniq.each {|product| purchase(product,@order.id,current_user.get_number_of_product_in_cart(product))}
         $redis.del "cart#{current_user.id}"
         OrderConfirmationMailer.with(user: current_user, order: @order).order_confirmation_email.deliver_later
-        format.html { redirect_to orders_summary_path, order: @order }        
+        format.html { redirect_to new_charge_path, order: @order }        
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @order.errors, status: :unprocessable_entity }

@@ -6,25 +6,66 @@
 		<div class="form-container radius-box glassy-bg small-10 small-centered medium-8 large-6 columns">
 		  <h2 class="mbs">Payment</h2>
 
-			<%= form_tag charges_path do %>
-			  <article>
-			    <% if flash[:error].present? %>
-			      <div id="error_explanation">
-			        <p><%= flash[:error] %></p>
-			      </div>
-			    <% end %>
-			    <label class="amount">
-			      <span>Amount: <%=session[:total_price]%>€</span>
-			    </label>
-			  </article>
+			<form id="payment-form" data-secret="<%= @payment_intent.client_secret %>">
+  			<div id="payment-element">
+    		<!-- placeholder for Elements -->
+  			</div>
+  		</br>
+  			<button id="submit">Pay Now <%=session[:total_price]%>€</button>
+  			  <div id="error-message">
+    			<!-- Display error message to your customers here -->
+  			</div>
+			</form>
 
-			  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-			          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-			          data-description="Checkout"
-			          data-amount=<%=(session[:total_price].to_f*100).to_s%>
-			          data-currency="eur"
-			          data-locale="auto"></script>
-			<% end %>
+
 		</div>
 	</div>
 </section>
+
+<script>
+
+		const stripe = Stripe("<%=Rails.configuration.stripe[:publishable_key]%>");
+
+
+		const options = {
+			clientSecret: '<%=@payment_intent.client_secret%>',
+  			// Fully customizable with appearance API.
+  			appearance: {},
+			};
+
+		// Set up Stripe.js and Elements to use in checkout form, passing the client secret obtained in a previous step
+		const elements = stripe.elements(options);
+
+
+
+		// Create and mount the Payment Element
+		const paymentElement = elements.create('payment');
+		paymentElement.mount('#payment-element');
+
+		const form = document.getElementById('payment-form');
+
+		form.addEventListener('submit', async (event) => {
+		  event.preventDefault();
+
+		  const {error} = await stripe.confirmPayment({
+		    //`Elements` instance that was used to create the Payment Element
+		    elements,
+		    confirmParams: {
+		      return_url: '<%=request.base_url%>/charges/create',
+		    },
+		  });
+
+		  if (error) {
+		    // This point will only be reached if there is an immediate error when
+		    // confirming the payment. Show error to your customer (for example, payment
+		    // details incomplete)
+		    const messageContainer = document.querySelector('#error-message');
+		    messageContainer.textContent = error.message;
+		  } else {
+		    // Your customer will be redirected to your `return_url`. For some payment
+		    // methods like iDEAL, your customer will be redirected to an intermediate
+		    // site first to authorize the payment, then redirected to the `return_url`.
+		  }
+		});
+
+</script>
