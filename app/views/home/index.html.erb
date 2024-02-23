@@ -519,7 +519,7 @@
 
 			<div class="row text-center">
 
-				<% @products.each do |product| %>
+				<% @products.order(id: :desc).each do |product| %>
 					<div class="col-md-3">
 						<div class="shop-box">
 							<div class="media-element">
